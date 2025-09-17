@@ -1,0 +1,218 @@
+        body {
+            font-family: Calibri;
+            line-height: 1.6;
+            margin: 20px;
+            font-size: 14px;
+            background-color: #f5f7f9;
+            color: #333;
+        }
+
+        h1 {
+            font-family: Calibri;
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(35, 44, 119);
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        #tree-container {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tree {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .tree ul {
+            list-style-type: none;
+            padding-left: 25px;
+            border-left: 1px solid #e0e0e0;
+            margin: 5px 0;
+        }
+        
+        .tree li {
+            position: relative;
+            margin: 8px 0;
+        }
+        
+        .tree .node {
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            background-color: #f9f9f9;
+            transition: all 0.2s ease;
+        }
+        
+        .tree .node:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .tree .node::before {
+            content: "▶";
+            font-size: 10px;
+            margin-right: 8px;
+            color: #666;
+        }
+        
+        .tree .node.expanded::before {
+            content: "▼";
+        }
+        
+        .tree .level1 {
+            font-family: Calibri;
+            font-size: 16px;
+            font-weight: bold;
+            color: rgb(35, 44, 119);
+            background-color: #e6f2ff;
+        }
+
+        .tree .level2 {
+            font-family: Calibri;
+            font-size: 15px;
+            font-weight: bold;
+            color: rgb(35, 44, 119);
+        }
+        
+        .tree .level3 {
+            font-family: Calibri;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(35, 44, 119);
+            background-color: #f3e5f5;
+        }
+        
+        .tree .level4 {
+            font-family: Calibri;
+            font-size: 13px;
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #eee;
+        }
+        
+        .tree .level5 {
+            font-family: Calibri;
+            font-size: 12px;
+            color: #666;
+            background-color: #fafafa;
+            border: 1px solid #f0f0f0;
+            padding: 5px 8px;
+            margin: 2px 0;
+            border-radius: 4px;
+        }
+        
+        .tree .values-list {
+            list-style-type: none;
+            padding-left: 15px;
+            margin: 5px 0;
+        }
+        
+        .tree .values-list li {
+            margin: 3px 0;
+        }
+        
+        .tree .count {
+            font-family: Calibri;
+            font-weight: normal;
+            color: rgb(35, 44, 119);
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        /*
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .loading {
+            background-color: #e6f7ff;
+            color: #0066cc;
+        }
+        
+        .success {
+            background-color: #e6ffed;
+            color: #009900;
+        }
+        
+        .error {
+            background-color: #fff2f0;
+            color: #ff4d4f;
+        }
+            */
+
+        /* Минималистичная форма для значений */
+        .values-form {
+            margin: 8px 0 8px 20px;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+        
+        .values-form .form-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 13px;
+        }
+        
+        .values-list-minimal {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .values-list-minimal li {
+            padding: 4px 6px;
+            border-bottom: 1px solid #eee;
+            font-size: 12px;
+        }
+        
+        .values-list-minimal li:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 10px;
+                font-size: 12px;
+            }
+            
+            h1 {
+                font-size: 18px;
+            }
+            
+            .tree ul {
+                padding-left: 15px;
+            }
+            
+            .tree .node {
+                padding: 6px 8px;
+            }
+            
+            .tree .level1 {
+                font-size: 14px;
+            }
+            
+            .tree .level2,
+            .tree .level3,
+            .tree .level4,
+            .tree .level5 {
+                font-size: 12px;
+            }
+        }
