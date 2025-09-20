@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Научное сопровождение топливно-энергетического комплекса</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Научное сопровождение ТЭК</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Научное сопровождение топливно-энергетического комплекса</h1>
+<h1>Научное сопровождение Топливно-Энергетического Комплекса</h1>
 
-    <div id="status" class="status loading">Загрузка данных...</div>
-    <div id="tree-container"></div>
+<div class="toolbar">
+    <div class="search-container">
+        <input id="search-input" type="text" placeholder="Поиск…" />
+        <button id="search-button" type="button">Найти</button>
+        <div id="search-results" class="search-results"></div>
+    </div>
+    <div class="controls">
+        <button hidden id="expand-all" type="button">Развернуть всё</button>
+        <button hidden id="collapse-all" type="button">Свернуть всё</button>
+    </div>
+</div>
 
-    <script src="script.js"></script>
+<div id="status" class="status loading">Загрузка данных…</div>
+<div id="tree-container" class="tree-container"></div>
+
+<noscript>Для работы требуется JavaScript.</noscript>
+<script src="script.js"></script>
 </body>
 </html>
