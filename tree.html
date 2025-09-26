@@ -4,28 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Научное сопровождение ТЭК</title>
+    <!-- Подключаем файл со стилями CSS -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- Подключаем статический файл favicon в корне проекта -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-<h1>Научное сопровождение Топливно-Энергетического Комплекса</h1>
-
-<div class="toolbar">
-    <div class="search-container">
-        <input id="search-input" type="text" placeholder="Поиск…" />
-        <button id="search-button" type="button">Найти</button>
-        <div id="search-results" class="search-results"></div>
+    <h1>Научное сопровождение Топливно-Энергетического Комплекса</h1>
+    <!-- Блок для реализации алгоритмов контекстного поиска -->
+    <div class="toolbar">
+        <div class="search-container">
+            <input id="search-input" type="text" placeholder="Поиск…" />
+            <button id="search-button" type="button">Найти</button>
+            <div id="search-results" class="search-results"></div>
+        </div>
+        <!-- Блок контроля для развертывания дерева значений,
+            скрыт для пользователя, используется для правильного
+            отображения данных  -->
+        <div class="controls">
+            <button hidden id="expand-all" type="button">Развернуть всё</button>
+            <button hidden id="collapse-all" type="button">Свернуть всё</button>
+        </div>
     </div>
-    <div class="controls">
-        <button hidden id="expand-all" type="button">Развернуть всё</button>
-        <button hidden id="collapse-all" type="button">Свернуть всё</button>
-    </div>
-</div>
-
-<div id="status" class="status loading">Загрузка данных…</div>
-<div id="tree-container" class="tree-container"></div>
-
-<noscript>Для работы требуется JavaScript.</noscript>
-<script src="script.js"></script>
+    <!-- Информация о загрузук данных -->
+    <div id="status" class="status loading">Загрузка данных…</div>
+    <div id="tree-container" class="tree-container"></div>
+    <!-- Подключаем файл со скриптами JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
